@@ -13,14 +13,8 @@ $realm = ($v = Read-Host "Enter your realm database [alpha_realm]") ? $v : 'alph
 $dbc = ($v = Read-Host "Enter your dbc database [alpha_dbc]") ? $v : 'alpha_dbc'
 $world = ($v = Read-Host "Enter your world database [alpha_world]") ? $v : 'alpha_world'
 start mariadbd.exe --console
-mariadb --user=$username --password=$password --port=$port -e "create database $realm";
-mariadb --user=$username --password=$password --port=$port -e "create database $dbc";
-mariadb --user=$username --password=$password --port=$port -e "create database $world";
-mariadb --user=$username --password=$password --port=$port $realm -e "source etc\databases\realm\realm.sql"
 mariadb --user=$username --password=$password --port=$port $realm -e "source etc\databases\realm\updates\updates.sql"
-mariadb --user=$username --password=$password --port=$port $dbc -e "source etc\databases\dbc\dbc.sql";
 mariadb --user=$username --password=$password --port=$port $dbc -e "source etc\databases\dbc\updates\updates.sql"
-mariadb --user=$username --password=$password --port=$port $world -e "source etc\databases\world\world.sql"
 mariadb --user=$username --password=$password --port=$port $world -e "source etc\databases\world\updates\updates.sql"
 Rename-Item -Path "etc/config/config.yml.dist" -NewName "config.yml"
 (Get-Content etc/config/config.yml) -Replace 'host: 0.0.0.0', 'host: 127.0.0.1' | Set-Content etc/config/config.yml
