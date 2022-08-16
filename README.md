@@ -3,7 +3,7 @@
 Scripts to automate alpha-core setup with minimal user input.
 
 ## Prerequisites
-Windows 10 1709 (build 16299)
+Windows 10 version 1709 (build 16299)
 
 ## How to setup:
 1. Run ```Start_Setup.bat```
