@@ -6,9 +6,9 @@ if ($IsWindows) {
     $env:Path += ';C:\Users\IPSUM\AppData\Local\Programs\Python\Python310\Scripts'
 }
 pip3 install -r requirements.txt
-$username = ($v = Read-Host "Enter your username [root]") ? $v : 'root'
-$password = ($v = Read-Host "Enter your password []") ? $v : ''
-$port = ($v = Read-Host "Enter your port [3306]") ? $v : '3306'
+$username = ($v = Read-Host "Enter your database username [root]") ? $v : 'root'
+$password = ($v = Read-Host "Enter your database password []") ? $v : ''
+$port = ($v = Read-Host "Enter your database port [3306]") ? $v : '3306'
 $realm = ($v = Read-Host "Enter your realm database [alpha_realm]") ? $v : 'alpha_realm'
 $dbc = ($v = Read-Host "Enter your dbc database [alpha_dbc]") ? $v : 'alpha_dbc'
 $world = ($v = Read-Host "Enter your world database [alpha_world]") ? $v : 'alpha_world'
