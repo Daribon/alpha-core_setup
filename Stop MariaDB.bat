@@ -1,1 +1,1 @@
-"C:\Program Files\MariaDB 10.8\bin\mysqladmin.exe" -u root shutdown
+"C:\Program Files\MariaDB 10.9\bin\mysqladmin.exe" -u root shutdown
