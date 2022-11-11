@@ -1,9 +1,9 @@
 #Requires -Version 7.0
 cd alpha-core-master
 if ($IsWindows) {
-    $env:Path += ';C:\Program Files\MariaDB 10.8\bin'
-    $env:Path += ';C:\Users\IPSUM\AppData\Local\Programs\Python\Python310'
-    $env:Path += ';C:\Users\IPSUM\AppData\Local\Programs\Python\Python310\Scripts'
+    $env:Path += ';C:\Program Files\MariaDB 10.9\bin'
+    $env:Path += ';C:\Users\IPSUM\AppData\Local\Programs\Python\Python311'
+    $env:Path += ';C:\Users\IPSUM\AppData\Local\Programs\Python\Python311\Scripts'
 }
 pip3 install -r requirements.txt
 $username = ($v = Read-Host "Enter your database username [root]") ? $v : 'root'
