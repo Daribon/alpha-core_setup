@@ -1,0 +1,1 @@
+UPDATE `alpha_realm`.`realmlist` SET `proxy_address`='127.0.0.1', `realm_address`='127.0.0.1' WHERE  `realm_id`=1;

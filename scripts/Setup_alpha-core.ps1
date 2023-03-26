@@ -22,6 +22,7 @@ mariadb --user=$username --password=$password --port=$port $dbc -e "source etc\d
 mariadb --user=$username --password=$password --port=$port $dbc -e "source etc\databases\dbc\updates\updates.sql"
 mariadb --user=$username --password=$password --port=$port $world -e "source etc\databases\world\world.sql"
 mariadb --user=$username --password=$password --port=$port $world -e "source etc\databases\world\updates\updates.sql"
+mariadb --user=$username --password=$password --port=$port $realm -e "source ..\sql\realmlist.sql"
 Rename-Item -Path "etc/config/config.yml.dist" -NewName "config.yml"
 (Get-Content etc/config/config.yml) -Replace 'host: 0.0.0.0', 'host: 127.0.0.1' | Set-Content etc/config/config.yml
 (Get-Content etc/config/config.yml) -Replace "username: root", "username: $username" | Set-Content etc/config/config.yml
